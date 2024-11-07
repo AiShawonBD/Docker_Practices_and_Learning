@@ -16,9 +16,10 @@ def get_hit_count():
                 raise exc
             retries -= 1
             time.sleep(0.5)
-            
+
 
 @app.route('/')
 def hello():
     count = get_hit_count()
     return 'Hello World! I have been seen {} times.\n'.format(count)
+    return 'Hello from Docker! I have been seen {} times.\n'.format(count)
